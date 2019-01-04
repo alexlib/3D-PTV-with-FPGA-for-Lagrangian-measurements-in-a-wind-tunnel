@@ -1,0 +1,11 @@
+main.pdf
+*.out
+*.aux
+*.log
+*.synctex.gz
+*.blg
+
+*.toc
+*.snm
+*.nav
+movies
