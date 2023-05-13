@@ -12,6 +12,9 @@
 \usePrimaryRed
 \useAccentGreen
 
+\setbeamertemplate{footline}[frame number]
+
+
 \begin{document}
 
 \begin{frame}
@@ -94,7 +97,7 @@ All content should only appear in cards. There are several variants:
 
 \begin{frame}{card with an image}
 \centering
-\cardImg{img/rudolfinum.jpg}{0.5\textwidth}
+\cardImg{fig/mr_ptv_photo}{0.5\textwidth}
 
 \begin{card}
 {\color{primary} \textbackslash cardImg\{file name\}\{width\}}
@@ -118,7 +121,7 @@ Tiny card is useful for labels where too much whitespace gets in the way.
 \begin{frame}{Cards can be filled with anything you want}
 
 \begin{card}
-\centering$V(x) = \left\{ y \in \mathbb{R}^n \,|\, \forall z \in P, z\neq x:\, \|y-x\|\leq\|y-z\| \right\}$
+\centering $V(x) = \left\{ y \in \mathbb{R}^n \,|\, \forall z \in P, z\neq x:\, \|y-x\|\leq\|y-z\| \right\}$
 \end{card}
 
 \begin{card}
@@ -138,7 +141,7 @@ The sum of the areas of the two squares on the legs equals the area of the squar
 \end{frame}
 
 \section{Image background}
-\begin{frameImg}{img/rudolfinum.jpg}
+\begin{frameImg}{fig/telaviv}
 \vspace*{60mm}
 \begin{cardTiny}
 Lastly it is possible to set image as a background for a frame:\\[2mm]
@@ -148,11 +151,19 @@ Lastly it is possible to set image as a background for a frame:\\[2mm]
 \end{cardTiny}
 \end{frameImg}
 
-\begin{frameImg}[height]{img/rudolfinum.jpg}
+\begin{frameImg}[height]{fig/telaviv}
 \vspace*{60mm}
 \begin{cardTiny}
 Parameter {\color{primary} ["height"]} determines the dimension that is stretched to cover the frame ({\color{primary} ["width"]} is default).
 \end{cardTiny}
+\end{frameImg}
+
+
+\begin{frameImg}[height]{fig/open_week_tau.png}
+% \vspace*{60mm}
+%\begin{cardTiny}
+%International students are very welcome - follow this great opportunity to visit Tel Aviv for free :) .
+%\end{cardTiny}
 \end{frameImg}
 
 \begin{frame}
