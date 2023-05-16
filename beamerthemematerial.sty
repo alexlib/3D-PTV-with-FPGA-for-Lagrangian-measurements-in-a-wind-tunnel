@@ -80,4 +80,47 @@ segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east
   \end{frame}
 }
 
+
+
+% Create a new topic-introduction frame with primary background color and the topic name as title (given as argument)
+\newcommand{\topicFramePrimary}[2][\unskip]{
+	{
+		\colorlet{bgcolor-03}{primary}
+		\colorlet{secondary-color-text}{textPrimary}
+		\usebeamercolor*{normal text}
+		\begin{frame}
+			\begin{center}
+				{\LARGE#2}
+				\ifx\hfuzz#1\hfuzz
+				% EMPTY
+				\else
+				\\
+				\vspace{1em}
+				#1%
+				\fi
+			\end{center}
+		\end{frame}
+	}
+}
+% \newcommand{\topicFrameSecondary}[2][\unskip]{
+% 	{
+% 		\colorlet{bgcolor-03}{secondary-color}
+% 		\usebeamercolor*{normal text}
+% 		\begin{frame}
+% 			\begin{center}
+% 				{\LARGE#2}
+% 				\ifx\hfuzz#1\hfuzz
+% 				% EMPTY
+% 				\else
+% 				\\
+% 				\vspace{1em}
+% 				#1%
+% 				\fi
+% 			\end{center}
+% 		\end{frame}
+% 	}
+% }
+
+
+
 \mode<all>

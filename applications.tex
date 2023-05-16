@@ -16,10 +16,10 @@
 
 % \input{embed_video}
 
-\section{Applications that might benefit from real-time}
+\section{applications that might benefit from real-time}
+\topicFramePrimary{Applications}
 
-
-\begin{frame}[label=app-110]
+\begin{frame}[label=app-110b]
 \frametitle{When the real-time flow information is crucial?}
 \begin{itemize}
 	\item Time-varying on slow time scales (e.g. sediment transport)
@@ -64,15 +64,15 @@
     \end{columns}
     \end{frame}
     
-    \begin{frame}[label=app-2]{Single camera with a four-view splitter}
+    \begin{frame}[label=app-2b]{Single camera with a four-view splitter}
     \centering\cardImg{kim/setup.png}{.95\textwidth}
     \end{frame}
     
-    \begin{frame}[label=app-3]{Four view splitter}
+    \begin{frame}[label=app-3b]{Four view splitter}
     \embedvideo{\includegraphics[width=\textwidth]{fig/kim/4views.png}}{fig/kim/Video1a.mp4}
     \end{frame}
     
-    \begin{frame}[label=app-4]{Turbulent jet flow}
+    \begin{frame}[label=app-4b]{Turbulent jet flow}
         \centering\cardImg{kim/jet.png}{\textwidth}
     \end{frame}
 
@@ -119,7 +119,7 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}[label=app-4]{Aorta moving boundary + complex geometry, ETH Zurich}
+\begin{frame}[label=app-4a]{Aorta moving boundary + complex geometry, \href{https://www.dropbox.com/s/p1xnc7mefoqboti/aorta_rigid.mp4?dl=0}{ETH Zurich}}
 \embedvideo{\includegraphics[width=\textwidth]{fig/aorta.png}}{video/aorta_rigid.mp4}
     \cardImg{aorta}{.9\textwidth}
 \end{frame}
@@ -178,35 +178,33 @@
     
 %    
 %    
-    \begin{frame}[label=app-110]{You could also do PIV on FPGA}
+    \begin{frame}[label=app-110a]{You could also do PIV on FPGA}
     \cardImg{real_time_piv_fpga.png}{\textwidth}
     \begin{cardTiny}
-    REAL-TIME PARTICLE IMAGE VELOCIMETRY
-    BASED ON FPGA TECHNOLOGY, Munoz et al. IEEE (2009)
+    Real-time particle image velocimetry based on FPGA technology, Munoz et al. IEEE (2009)
     \end{cardTiny}
     \end{frame}
 %    
 %    
-\begin{frame}[label=app-111]{Take it to the space}
-    \cardImg{maser_8}{0.3\textwidth}
-    \cardImg{space_3d_ptv}{0.6\textwidth}
+\begin{frame}[label=app-11a]{Take it to the space - video credit: \href{https://www.dropbox.com/s/59ophf177gcfjzq/boiling_microgravity.mp4?raw=1}{ESA}}
+    %\cardImg{maser_8}{0.3\textwidth}
+    \embedvideo{\cardImg{space_3d_ptv}{0.8\textwidth}}{video/boiling_microgravity.mp4}
     \begin{cardTiny}
-    DESIGN AND CALIBRATION OF A FOUR-HEADED CAMERA SYSTEM
-    FOR USE IN MICROGRAVITY RESEARCH, Willneff and Maas, 
+    Design and calibration of a four-headed camera for use in microgravity research, Willneff and Maas, ETH Zurich
     \end{cardTiny}
 \end{frame}
     
 
 \begin{frame}[label=app-1]
-    \frametitle{Suction feeding events, courtesy of Prof. Roi Holzman, TAU}
+    \frametitle{Suction feeding events, courtesy of \href{https://www.dropbox.com/s/wcytdkxuxxvn4q0/fish_feeding.mp4?raw=1}{Prof. Roi Holzman, TAU}}
     \embedvideo{\includegraphics[width=\textwidth]{fig/fish_feeding.png}}{video/fish_feeding.mp4}
     %or this great video from Monterey Bay Aquarium 
     %
     %https://www.youtube.com/watch?v=umTqQSzKRmA    
 \end{frame}
     
-    \begin{frame}[label=app-2]
-    \frametitle{Flamingo underwater feeding - San Diego Zoo}
+    \begin{frame}[label=app-2a]
+    \frametitle{Flamingo underwater feeding - \href{https://www.dropbox.com/s/ic0l5npzon834l9/flamingo.mp4?raw=1}{San Diego Zoo}}
     % https://www.youtube.com/watch?v=-1BF2XqboOo
     \begin{center}
     \embedvideo{\includegraphics[width=\textwidth]{fig/flamingo.png}}{video/flamingo.mp4}
@@ -216,14 +214,14 @@
     %
     
 \begin{frame}[label=app-31]
-    \frametitle{Colloids breakage events in turbulent flow, ETH Zurich}
+    \frametitle{Colloids breakage events in turbulent flow, \href{https://www.dropbox.com/s/aufwfraotj5rll7/colloids1.mp4?raw=1}{ETH Zurich}}
     %https://pubs.acs.org/doi/10.1021/acs.langmuir.5b03804
     \embedvideo{\includegraphics[width=\textwidth]{fig/colloids1.png}}{video/colloids1.mp4}
 \end{frame}
     
     %
     
-\begin{frame}[label=app-3]{Colloids breakage events in turbulent flow, ETH Zurich}
+\begin{frame}[label=app-3a]{Colloids breakage events in turbulent flow, \href{https://www.dropbox.com/s/8cimpwfsukf11u2/colloids2.mp4?raw=1}{ETH Zurich}}
     %https://pubs.acs.org/doi/10.1021/acs.langmuir.5b03804
     \embedvideo{\includegraphics[width=\textwidth]{colloid_sequence.jpg}}{video/colloids2.mp4}\end{frame}
     
@@ -242,24 +240,30 @@
     \end{multicols*}
 \end{frame}
     
-\begin{frame}[label=app-7]{Fibers - Stefano Brizzolara, ETH Zurich}
+\begin{frame}[label=app-7]{Fibers - \href{https://www.dropbox.com/s/y5gf55qqeyq5ljr/fibers.mp4?raw=1}{Stefano Brizzolara, ETH Zurich}}
     % https://twitter.com/stebrizzo94/status/1525577322144976910?s=20
     \embedvideo{\includegraphics[height=\textheight]{fibers.png}}{video/fibers.mp4}
 \end{frame}
+
+\begin{frame}[label=app-8a]{Microplastics in a vortex - \href{https://www.dropbox.com/s/in5ewv968dy9j3q/microplastics.mp4?raw=1}{Turbulence Structure Laboratory}}
+    % Imaging‑based 3D particle tracking system forfield characterization ofparticle dynamics inatmospheric flows
+    \embedvideo{\includegraphics[height=\textheight]{trajects.png}}{video/microplastics2.mp4}\\
+    Bristow et al. Exp. Fluids, 2023
+\end{frame}
     
-\begin{frame}[label=app-8]{Drone vs turbulence - University of Minnesota}
+\begin{frame}[label=app-8]{Drone vs turbulence - \href{https://www.dropbox.com/s/3lav5rf6s8su6f5/drone.mp4?raw=1}{University of Minnesota}}
     % Imaging‑based 3D particle tracking system forfield characterization ofparticle dynamics inatmospheric flows
     \embedvideo{\includegraphics[height=\textheight]{drone.png}}{video/drone.mp4}\\
     Bristow et al. Exp. Fluids, 2023
 \end{frame}
     
-    \begin{frame}[label=app-9]{Soon we could do it using AR/VR}
+\begin{frame}[label=app-9]{Soon we could do it using AR/VR}
     \cardImg{mr_ptv_photo}{0.8\textwidth}
     Chivers, T. Uni. Vermont, MSc Thesis, 2023
-    \end{frame}
+\end{frame}
     
     
-\begin{frame}[label=app-811]{Turbulent flow inside an urban canopy model - IIBR wind tunnel}
+\begin{frame}[label=app-811]{Turbulent flow inside an urban canopy model at \href{https://www.dropbox.com/s/9x43i2uk9q38fho/flow_inside_laser.mp4?raw=1}{IIBR wind tunnel}}
     \embedvideo{\includegraphics[width=\textwidth]{flow_snapshot_inside.jpg}}{video/flow_inside_laser.mp4}
 \end{frame}
 %    
