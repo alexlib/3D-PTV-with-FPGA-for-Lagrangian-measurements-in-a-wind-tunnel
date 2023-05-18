@@ -1,24 +1,54 @@
-\section{Why real-time}
+
+\section{Why real-time 3D-PTV is a good idea}
+\topicFramePrimary{Why real-time 3D-PTV ? }
+
+\begin{frame}
+\frametitle{In this section I want to:}
+\begin{itemize}
+\item Explain how real-time 3D-PTV provides unique benefits, such as nearly real-time results, that are unavailable through other methods.
+\item Describe some of the potential applications of real-time 3D-PTV, such as in fluid dynamics, combustion, and biomedical engineering.
+\item Present some examples of successful real-time 3D-PTV projects to illustrate their utility.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Some essential problems with our measurements}
+
+\begin{itemize}
+    \item How many times did we experiments for hours, days, or weeks and lose everything due to invalid calibration? Improper camera settings? Malfunctioning camera or trigger? 
+    \item How much do we lose for improper flow settings, e.g. when we measure the flow but it depends on other conditions, e.g water depth in a water channel, fluid properties during the experiment (e.g. density of growing biomass)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Continued ...}
+\begin{itemize}
+    \item Simple fluid mechanics cases are solved; we are dealing with moving boundaries, 3D shapes, non-even illumination, harsh environments, remote experiments (microgravity, ocean bottom, autonomous drones)
+    \item How many careful experiments we missed cause the event we were looking for just happened a second before we turned the cameras on or a second after we ran out of space on our drives?
+    \item How many times have we an experiment that needs to run for many hours or days but we couldn't store the data for so long cause we also want time resolution? 
+\end{itemize}
+    
+\end{frame}
+
 
 
 \begin{frame}[label=intro]
-\frametitle{We start with a happy end story}
+\frametitle{I want to add my personal ``best argument''}
 \cardImg{Ron.jpg}{0.8\textwidth}
 \begin{cardTiny}
-Ron Shnapp is a faculty at the Ben Gurion University, but it could turn out differently. 
+Thanks to this technology, Dr. Ron Shnapp is now a tenure-track faculty at Ben Gurion University, (it could easily become an experimental flop)
 \end{cardTiny}
 \end{frame}
 
-\begin{frame}{The Conceptual Advantage of Real-Time Information for Measurement Systems}
 
-\begin{itemize}
-\item Real-time information gives users a better understanding of the measurement process and enables them to make more informed decisions based on the data.
-\item Real-time information allows users to monitor the measurement process in real time and detect any anomalies or issues as they occur.
-\item Real-time information about uncertainties allows users better to understand the reliability and accuracy of the measured data.
-\item Real-time information about uncertainties can help users optimize the measurement process itself.
-\end{itemize}
+% \begin{frame}{The Conceptual Advantage of Real-Time Information for Measurement Systems}
 
-\end{frame}
+% \begin{itemize}
+% \item Real-time information gives users a better understanding of the measurement process and enables them to make more informed decisions based on the data.
+% \item Real-time information allows users to monitor the measurement process in real-time and detect any anomalies or issues as they occur: calibration/malfunction/out-of-sync
+% \item Real-time information about uncertainties allows users better to understand the reliability and accuracy of the measured data.
+% \item Real-time information about uncertainties can help users optimize the measurement process itself.
+% \end{itemize}
+
+% \end{frame}
 
 \begin{frame}{Real-Time Information Enables Effective Troubleshooting and Maintenance}
 
@@ -36,7 +66,6 @@ Ron Shnapp is a faculty at the Ben Gurion University, but it could turn out diff
 \item Real-time information about uncertainties allows users to make more informed decisions about how to use the data and what level of confidence they can have in the results.
 \item Real-time monitoring of uncertainties can help users optimize the measurement process and reduce uncertainties to improve overall accuracy and precision.
 \end{itemize}
-
 \end{frame}
 
 \begin{frame}{Real-Time Information Enables Faster Decision-Making}
@@ -66,71 +95,74 @@ Ron Shnapp is a faculty at the Ben Gurion University, but it could turn out diff
 
 \end{frame}
 
-\subsection{Why real-time 3D-PTV}
+% \subsection{Why real-time 3D-PTV}
 
-\begin{frame}{Advantages of Real-Time 3D-PTV}
-
-\begin{itemize}
-\item Real-time 3D-PTV allows for immediate feedback on the velocity field, which can be used for process control and optimization.
-\item Real-time 3D-PTV enables faster decision-making by providing immediate feedback on the fluid flow behavior, allowing for quick adjustments to be made as needed.
-\item Real-time 3D-PTV can provide detailed insight into the fluid flow behavior, which can be used for research purposes and to improve understanding of fluid dynamics.
-\item Real-time 3D-PTV can help improve the accuracy and precision of the measured data by allowing for adjustments to be made in real-time to reduce uncertainties.
-\item Real-time 3D-PTV can help detect any anomalies or issues in the fluid flow behavior as they occur, allowing for quick and effective troubleshooting and maintenance.
-\item Real-time 3D-PTV can be used to remotely monitor fluid flow behavior, which can be especially important in applications where access to the measurement system may be limited or difficult.
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}{Immediate Feedback for Process Control and Optimization}
+\begin{frame}{Key Advantages of Real-Time 3D-PTV}
 
 \begin{itemize}
-\item Real-time 3D-PTV allows for immediate feedback on the velocity field, which can be used for process control and optimization.
-\item Faster decisions can be made to adjust the process as needed, ensuring optimal performance and efficiency.
+\item Immediate feedback on the velocity field - enables process control and optimization of parameters and setup.
+\item Enables faster decision-making and quick adjustments to be made as needed.
+\item Detailed enough insight into the fluid flow behavior for understanding the dynamics.
+\item Improve the accuracy and precision of the measured data by allowing for adjustments to be made in real-time to reduce uncertainties.
+\item Detect anomalies or issues as they occur, allowing for quick and effective troubleshooting and maintenance.
+\item To remotely monitor fluid flow behavior, especially important in applications where access to the measurement system may be limited or difficult (underwater, in-engine, in-flight).
 \end{itemize}
-
 \end{frame}
 
-\begin{frame}{Faster Decision-Making}
-
-\begin{itemize}
-\item Real-time 3D-PTV enables faster decision-making by providing immediate feedback on the fluid flow behavior, allowing for quick adjustments to be made as needed.
-\item Faster decisions can help prevent delays and improve overall efficiency in applications where time is critical.
-\end{itemize}
-
+\begin{frame}{We were lucky to capitalize on these benefits in the wind tunnel experiment}
+    \cardImg{ptv_wind_tunnel_photo_3}{.45\textwidth}%
+    \cardImg{traj_snapshot3.pdf}{.45\textwidth}%
 \end{frame}
 
-\begin{frame}{Detailed Insight into Fluid Dynamics}
+% \begin{frame}{Immediate Feedback for Process Control and Optimization}
 
-\begin{itemize}
-\item Real-time 3D-PTV can provide detailed insight into the fluid flow behavior, which can be used for research purposes and to improve understanding of fluid dynamics.
-\item More detailed information can lead to new discoveries and improvements in fluid dynamics research.
-\end{itemize}
+% \begin{itemize}
+% \item Real-time 3D-PTV allows for immediate feedback on the velocity field, which can be used for process control and optimization.
+% \item Faster decisions can be made to adjust the process as needed, ensuring optimal performance and efficiency.
+% \end{itemize}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{Improved Accuracy and Precision}
+% \begin{frame}{Faster Decision-Making}
 
-\begin{itemize}
-\item Real-time 3D-PTV can help improve the accuracy and precision of the measured data by allowing for adjustments to be made in real-time to reduce uncertainties.
-\item Real-time monitoring of uncertainties can help reduce errors and improve confidence in the measured data.
-\end{itemize}
+% \begin{itemize}
+% \item Real-time 3D-PTV enables faster decision-making by providing immediate feedback on the fluid flow behavior, allowing for quick adjustments to be made as needed.
+% \item Faster decisions can help prevent delays and improve overall efficiency in applications where time is critical.
+% \end{itemize}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{Effective Troubleshooting and Maintenance}
+% % \begin{frame}{Detailed Insight into Fluid Dynamics}
 
-\begin{itemize}
-\item Real-time 3D-PTV can help detect any anomalies or issues in the fluid flow behavior as they occur, allowing for quick and effective troubleshooting and maintenance.
-\item Early detection of issues is critical in safety-critical applications where delays can have serious consequences.
-\end{itemize}
+% % \begin{itemize}
+% % \item Real-time 3D-PTV can provide detailed insight into the fluid flow behavior, which can be used for research purposes and to improve understanding of fluid dynamics.
+% % \item More detailed information can lead to discoveries and improvements in fluid dynamics research.
+% % \end{itemize}
+% \end{frame}
 
-\end{frame}
+% \begin{frame}{Improved Accuracy and Precision}
 
-\begin{frame}{Remote Monitoring}
+% \begin{itemize}
+% \item Real-time 3D-PTV can help improve the accuracy and precision of the measured data by allowing for adjustments to be made in real-time to reduce uncertainties.
+% \item Real-time monitoring of uncertainties can help reduce errors and improve confidence in the measured data.
+% \end{itemize}
 
-\begin{itemize}
-\item Real-time 3D-PTV can be used to remotely monitor fluid flow behavior, which can be especially important in applications where access to the measurement system may be limited or difficult.
-\item Remote monitoring can allow for more efficient use of resources and improve safety in hazardous environments.
-\end{itemize}
+% \end{frame}
 
-\end{frame}
+% \begin{frame}{Effective Troubleshooting and Maintenance}
+
+% \begin{itemize}
+% \item Real-time 3D-PTV can help detect any anomalies or issues in the fluid flow behavior as they occur, allowing for quick and effective troubleshooting and maintenance.
+% \item Early detection of issues is critical in safety-critical applications where delays can have serious consequences.
+% \end{itemize}
+
+% \end{frame}
+
+% \begin{frame}{Remote Monitoring}
+
+% \begin{itemize}
+% \item Real-time 3D-PTV can be used to remotely monitor fluid flow behavior, which can be especially important in applications where access to the measurement system may be limited or difficult.
+% \item Remote monitoring can allow for more efficient use of resources and improve safety in hazardous environments.
+% \end{itemize}
+
+% \end{frame}
