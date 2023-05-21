@@ -1,33 +1,22 @@
-% \documentclass{beamer}
-% \usepackage{graphicx}
-% \usepackage{multicol}
-% \setlength{\columnseprule}{1pt}
+\topicFramePrimary{Real time 3D-PTV technical challenges}
 
-% \graphicspath{{./fig/}}
-% \usetheme{material}
-% \input{embed_video.tex}
-
-% \newlength{\wdth}
-
-% \newcommand{\strike}[1]{\settowidth{\wdth}{#1}\rlap{\rule[.5ex]{\wdth}{.4pt}}#1}
-
-
-% \begin{document}
-
-\begin{frame}[label=real-31]{Since 1989, \ldots }
+\begin{frame}[label=real-1]{Long time it was a heavy laboratory system - ETH Zurich, 1989}
     \centering\cardImg{eth_zurich_3d_ptv_1989}{\textwidth}
 \end{frame}
 
     
-\begin{frame}[label=real-3]{3D PTV \strike{is} was a lab system}
-    \centering\cardImg{lab.jpg}{.9\textwidth}
+\begin{frame}[label=real-2]{With advance of cameras and electronics it only grew in size}
+    \centering\cardImg{lab.jpg}{.85\textwidth}
 \end{frame}
 
-\begin{frame}[label=real-4]{The time-resolved recording requires literally ``heavy lift''}
+\begin{frame}[label=real-3]{The high-speed imaging and recording requires literally ``heavy lift''}
 \begin{multicols}{2}
-    \cardImg{ptv_drives1}{.495\textwidth}
-    \cardImg{ptv_drives2}{.495\textwidth}
+    \cardImg{ptv_drives1}{.45\textwidth}
+    \cardImg{ptv_drives2}{.45\textwidth}
 \end{multicols}
+\begin{cardTiny}
+    Data transfer rate requires 72 fiber-connected hard drives
+\end{cardTiny}
 \end{frame}
 
 
@@ -42,78 +31,83 @@
 %\end{frame}
 
 
-\begin{frame}[label=real-66]{The bottlenecks for 1 min run at 1 kHz}
-\begin{card}[Data transfer rate and size]
-\begin{itemize}
-\item 1.3 Mb/frame $\times$ 1000 frames/sec = 1300 Mb/sec
-\item 1300 Mb/s $\times$ 4 cameras = 5.2 Gb/sec
-\item SSD disk continuous writing speed is about 3.5 Gb/sec
-\item Total data size: 5.2 Gb/sec $\times$ 60 $\approx$ 300 Gb
-\end{itemize}
+\begin{frame}[label=real-4]{For instance for 1 min run at 1 kHz we need:}
+    \begin{card}[Data transfer rate and size]
+    \begin{itemize}
+    \item 1.3 Mb/frame $\times$ 1000 frames/sec = 1300 Mb/sec
+    \item 1300 Mb/s $\times$ 4 cameras = 5.2 Gb/sec
+    \item SSD disk continuous writing speed is about 3.5 Gb/sec
+    \item Total data size: 5.2 Gb/sec $\times$ 60 $\approx$ 300 Gb
+    \end{itemize}
 
-\end{card}
+    \end{card}
 \end{frame}
 
-\begin{frame}[label=real-6]{Need to eliminate the transfer rate bottleneck}
-%\begin{card}[from compression to on-camera processing]
-\begin{multicols*}{2}
-\cardImg{realtime1}{.49\textwidth}
-\cardImg{voth}{.48\textwidth}
-%
-\cardImg{mikrotron_sobel}{.49\textwidth}
-\cardImg{mikrotron_inside}{.49\textwidth}
-\end{multicols*}
-%\end{card}
-\end{frame}
-
-\begin{frame}[label=real-7]{Sobel edge detection based algorithm}
-\centering
-\cardImg{sobel_1}{.8\textwidth}
+\begin{frame}[label=real-5a]{First attempts tried image compression, similar to G. Voth}
+    %\begin{multicols*}{2}
+    % \cardImg{realtime1}{.49\textwidth}
+    \centering\cardImg{voth}{.8\textwidth}
+    % \cardImg{mikrotron_sobel}{.49\textwidth}
+    % \cardImg{mikrotron_inside}{.49\textwidth}
+    %\end{multicols*}
 \end{frame}
 
 
-\begin{frame}[label=real-8]{Works very well for lab experiments}
-\begin{card}
-\centering
-\includegraphics[width=.32\textwidth]{1_in}
-\includegraphics[width=.32\textwidth]{1_binarized}
-\includegraphics[width=.32\textwidth]{1_out}
-\end{card}
-\vspace{-.5cm}
-\begin{cardTiny}
-Raw image - binary image - blobs marked on the original image.  
-\end{cardTiny}
+\begin{frame}[label=real-6]{We took a different approach: detection}
+    \centering\cardImg{sobel_1}{.8\textwidth}
 \end{frame}
 
 
-\begin{frame}[label=real-13]{Real life is not like this}
-\begin{multicols}{2}
-\includegraphics[width=.49\textwidth]{background.png}
-\includegraphics[width=.49\textwidth]{detection.png}
-\end{multicols}
-\begin{cardTiny}
-Raw 3D-PTV image of the wind tunnel experiments: Background ->  binary image after background subtraction, and detection using a locally adaptive filter
-\end{cardTiny}
-\end{frame}
-
-\begin{frame}[label=real-12]{We had to develop the know-how}
-\centering\cardImg{1vision}{1\textwidth}
+\begin{frame}[label=real-5b]{We could utilize the special hardware from Mikrotron }
+    \begin{multicols*}{2}
+    \cardImg{mikrotron_sobel}{.45\textwidth}
+    \cardImg{mikrotron_inside}{.45\textwidth}
+    \end{multicols*}
+    \centering \cardImg{realtime1}{.8\textwidth}
 \end{frame}
 
 
-\begin{frame}[label=real-11]{Image processing algorithm on FPGA}
-\centering\cardImg{fig8}{1\textwidth}
-% \begin{cardTiny} Diagram of the blob analysis algorithm. \end{cardTiny}
+\begin{frame}[label=real-7]{Works very well for well-controlled laboratory experiments only}
+    \begin{card}
+    \centering
+    \includegraphics[width=.32\textwidth]{1_in}
+    \includegraphics[width=.32\textwidth]{1_binarized}
+    \includegraphics[width=.32\textwidth]{1_out}
+    \end{card}
+    \vspace{-.5cm}
+    \begin{cardTiny}
+    Raw image - binary image - blobs marked on the original image.  
+    \end{cardTiny}
 \end{frame}
 
-\begin{frame}[label=real-10]{And its implementation on dedicated hardware}
-\cardImg{1vision_blob_recorder_2}{1\textwidth}
-% \cardImg{backside}{.25\textwidth}
+
+\begin{frame}[label=real-8]{Unfortunately, real experiments are more complicated}
+    \begin{multicols}{2}
+    \includegraphics[width=.49\textwidth]{background.png}
+    \includegraphics[width=.49\textwidth]{detection.png}
+    \end{multicols}
+    \begin{cardTiny}
+    Raw 3D-PTV image of the wind tunnel experiments: Background ->  binary image after background subtraction, and detection using a locally adaptive filter
+    \end{cardTiny}
 \end{frame}
 
-\begin{frame}[label=real-100]{The central concept diagram}
-\centering
-\cardImg[height=.8\textheight]{fig1.png}{\textwidth}
+\begin{frame}[label=real-9]{We partnered with 1Vision to develop a dedicated hardware}
+    \centering\cardImg{1vision}{1\textwidth}
+\end{frame}
+
+
+\begin{frame}[label=real-10]{Developed a custom image processing (!) algorithm on FPGA}
+    \centering\cardImg{fig8}{1\textwidth}
+    % \begin{cardTiny} Diagram of the blob analysis algorithm. \end{cardTiny}
+    \end{frame}
+
+    \begin{frame}[label=real-11]{1Vision implementated it on SiliconSoftware FPGA framegrabbers}
+    \cardImg{1vision_blob_recorder_2}{1\textwidth}
+    % \cardImg{backside}{.25\textwidth}
+\end{frame}
+
+\begin{frame}[label=real-12]{The main concept}
+    \centering\cardImg[height=.8\textheight]{fig1.png}{\textwidth}
 \end{frame}
 
 %\end{document}

@@ -1,5 +1,5 @@
 %\documentclass[aspectratio=169]{beamer}
-\documentclass[aspectratio=43]{beamer}
+\documentclass[preprint, aspectratio=43]{beamer}
 % \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage[bigfiles]{pdfbase}
@@ -21,9 +21,9 @@
 \usepackage{tikz}
 % \usepackage[hidelinks]{hyperref}
 
-\newcommand{\height}{H}
-\newcommand{\av}[1]{\langle {#1} \rangle}
-\newcommand{\vect}[1]{\mathbf{#1}}
+% \newcommand{\height}{H}%
+% \newcommand{\av}[1]{\langle {#1} \rangle}
+% \newcommand{\vect}[1]{\mathbf{#1}}
 
 \newlength{\wdth}
 \newcommand{\strike}[1]{\settowidth{\wdth}{#1}\rlap{\rule[.5ex]{\wdth}{.4pt}}#1}
@@ -32,7 +32,7 @@
 % \title{3D-PTV with FPGA for Lagrangian measurements in a wind tunnel}
 \title{Towards a real-time three-dimensional particle tracking velocimetry (3D-PTV)}
 % \date{July 9, 2018}
-\date{June 19-21, 2023}
+\date{June 19--21, 2023}
 \author[Liberzon]{Alex Liberzon, Tel Aviv University}
 
 
@@ -53,8 +53,10 @@
 \input{embed_video.tex}
 
 % \includeonlyframes{intro-*}
+%\includeonlyframes{why-*}
 % \includeonlyframes{ptv-*}
-% \includeonlyframes{Intro-*,Sss-Slide2}
+% \includeonlyframes{real-*}
+% \includeonlyframes{why-*}
 
 \makeatletter
 \def\beamer@checkifinlist#1,#2\relax{%
@@ -101,104 +103,80 @@
 % \embedvideo{\cardImg[height=.8\textheight]{hourglass}{.9\textwidth}}{video/hourglass.mp4}
 % \end{frame}
 
-% \section{Outline}
-\section{Introduction}
-\topicFramePrimary{Introduction}
-%\section{Summary and conclusions}
-
-\begin{frame}
-\frametitle{Introduction}
-\begin{itemize}
-\item Briefly introduce yourself and your background in real-time 3D-PTV.
-\item Provide an overview of what real-time 3D-PTV is and why it is important.
-\end{itemize}
-\end{frame}
 
 \include{intro}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{why_real_time}
 
-\begin{frame}
-\frametitle{Feasibility and Difficulty}
-\begin{itemize}
-\item Discuss the technical feasibility of real-time 3D-PTV and the challenges that must be overcome to achieve it.
-\item Highlight some of the key research areas that need to be addressed to make real-time 3D-PTV more feasible and efficient.
-\item Provide examples of some of the tools and resources available to help researchers in this area.
-\end{itemize}
-\end{frame}
-
-
-\section{Feasibility and Difficulty}
-\topicFramePrimary{Navigating the Path to 3D-PTV: Essential Factors and Prerequisites}
 \include{ptv}
-\topicFramePrimary{From 3D-PTV towards real-time 3D-PTV}
+
 \include{real_time_3dptv}
-\topicFramePrimary{Some ideas on applications that could benefit from real-time 3D-PTV}
+
 \include{applications}
 
 \section{Benefits of open source and open science}
-\topicFramePrimary{It is important to work collectively and co-develop open-source software = sustainability}
+\topicFramePrimary{Let's work collectively and co-develop open-source software}
+% \topicFramePrimary{\includegraphics[width=0.5\textwidth]{openptv}}
 
 \begin{frame}
-\frametitle{Benefits of Open Source}
+\frametitle{The most important benefit of open source is sustainability}
 \begin{itemize}
-\item Explain the benefits of developing real-time 3D-PTV as an open-source project, such as increased collaboration and sharing of knowledge.
-\item Describe how the open-source approach has been successful in other scientific fields, such as software development and data science.
-\item Outline some of the potential challenges of developing an open-source real-time 3D-PTV project and how they can be addressed.
+\item Developing real-time 3D-PTV as an open-source project: increased collaboration and sharing of knowledge. 
+\item You meet great people along the way.
+\item The open-source approach has been successful in other scientific fields: ML/AI, PyData, OpenCV, OpenFOAM, etc.
+\item There are challenges of developing an open-source real-time 3D-PTV project: consistency, documentation, and funding.
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Open source software suite, all on Github}
+% \begin{frame}{Open source software suite, all on Github}
+% \begin{itemize}
+% \item \includegraphics[width=0.5\textwidth]{openptv} \hspace{1em} library, `liboptv`, ANSI C
+% \item PyPTV GUI for \emph{liboptv} in Python \includegraphics[width=.3\textwidth]{pyptv}
+% \item FlowTracks - trajectories database management (see Meller and Liberzon 2016)
+% \item BlobRecorder - proprietary hardware/customized software (see Shnapp et al. arxiv)
+% \end{itemize}
+% \end{frame}
+
+
+\begin{frame}[label=opensource-1]{Use sustainable software: Python, NumPy, PyData, Github}
 \begin{itemize}
-\item \includegraphics[width=0.5\textwidth]{openptv} \hspace{1em} library, `liboptv`, ANSI C
+\item \includegraphics[width=0.3\textwidth]{openptv} \hspace{1em} library, `liboptv`, ANSI C
 \item PyPTV GUI for {\em liboptv} in Python \includegraphics[width=.3\textwidth]{pyptv}
 \item FlowTracks - trajectories database management (see Meller and Liberzon 2016)
 \item BlobRecorder - proprietary hardware/customized software (see Shnapp et al. arxiv)
 \end{itemize}
 \end{frame}
 
-	 
-%\subsection{Post Processing}
-
-\begin{frame}[label=opensource-1]{Open source software suite, all on Github}
-\begin{itemize}
-\item \includegraphics[width=0.5\textwidth]{openptv} \hspace{1em} library, `liboptv`, ANSI C
-\item PyPTV GUI for {\em liboptv} in Python \includegraphics[width=.3\textwidth]{pyptv}
-\item FlowTracks - trajectories database management (see Meller and Liberzon 2016)
-\item BlobRecorder - proprietary hardware/customized software (see Shnapp et al. arxiv)
-\end{itemize}
-\end{frame}
 
 
-\begin{frame}
-\frametitle{Conclusions}
-\begin{itemize}
-\item Summarize the key points of the presentation and reiterate the importance of real-time 3D-PTV and the benefits of developing it as an open-source project.
-\item Encourage audience members to become involved in real-time 3D-PTV research and development.
-\item Deliver the message to industry professionals, research scientists, and graduate students that their participation in developing real-time 3D-PTV as an open-source project can lead to significant benefits for all involved, including improved collaboration, knowledge-sharing, and scientific advancements.
-\end{itemize}
-\end{frame}
+\section{Take home message}\label{sec:summary}
 
 
+% \begin{frame}
+% \frametitle{Conclusions}
+% \begin{itemize}
+% \item Summarize the key points of the presentation and reiterate the importance of real-time 3D-PTV and the benefits of developing it as an open-source project.
+% \item Encourage audience members to become involved in real-time 3D-PTV research and development.
+% \item Deliver the message to industry professionals, research scientists, and graduate students that their participation in developing real-time 3D-PTV as an open-source project can lead to significant benefits for all involved, including improved collaboration, knowledge-sharing, and scientific advancements.
+% \end{itemize}
+% \end{frame}
 
 
-\section{Summary and conclusions}\label{sec:summary}
-
-\begin{frame}{Summary}
-\begin{itemize}
-\item Real-time imaging changed the 3D-PTV method and the way we think about it
-\item Field experiments, webcam or Kinect-based, wind tunnel experiments, space station microgravity experiments are possible
-\item Direct Lagrangian information in complex urban canopy flows is under analysis
-\item Close coordination with the modeling efforts of Lagrangian dispersion or Lagrangian puff models
-\end{itemize}
-\end{frame}
+% \begin{frame}{Summary}
+% \begin{itemize}
+% \item Real-time imaging changed the 3D-PTV method and the way we think about it
+% \item Field experiments, webcam or Kinect-based, wind tunnel experiments, space station microgravity experiments are possible
+% \item Direct Lagrangian information in complex urban canopy flows is under analysis
+% \item Close coordination with the modeling efforts of Lagrangian dispersion or Lagrangian puff models
+% \end{itemize}
+% \end{frame}
 
 
 
-\begin{frame}{Closing Thoughts}
+\begin{frame}{Closing thoughts}
 
 Real-time 3D particle tracking velocimetry (3D-PTV) provides numerous advantages for fluid flow measurement and analysis, including:
 
@@ -212,18 +190,29 @@ Real-time 3D particle tracking velocimetry (3D-PTV) provides numerous advantages
 
 Real-time 3D-PTV is an invaluable tool for a wide range of applications, from fundamental fluid dynamics research to industrial process optimization and safety-critical applications.
 
-\bigskip
-Thank you for your attention!
-
 \end{frame}
 
-% \begin{frame}{Thank you for your attention}
-% \cardImg{photo}{\textwidth}
-% \end{frame}
 
+\begin{frame}{Take-home message}
+  \begin{itemize}
+  \item Customized real-time image analysis on FPGA can be implemented for long-recording, high-speed 3D-PTV
+  \item New developments change a paradigm about 3D-PTV: from the laboratory, table-top experiments to wind tunnels and field experiments
+  \item Instead of dense field representation (TomoPIV, Shake the box),  you can obtain an unprecedented data set of of Lagrangian trajectories, along with Lagrangian velocity and material derivative. 
+  \end{itemize}
+  
+  \begin{cardTiny}\href{https://www.nature.com/articles/s41598-019-43555-2}{Details are in ``Extended 3D-PTV ...'' by Shnapp et al. Sci. Rep.}
+  \end{cardTiny}
+  
+  \end{frame}
+  
+  
+  \begin{frame}{Thanks for your attention \href{https://www.dropbox.com/s/resn98zu5l7vtty/real_time_3dptv.mp4?raw=1}{clip}}
+  \embedvideo{\includegraphics[width=\textwidth]{fig/real_time_3dptv_snapshot.jpg}}{video/real_time_3dptv.mp4}    
+  \end{frame}
 
+  
 
-\subsection{Credits}
+% \subsection{Credits}
 \topicFramePrimary{Credits}
 
 \begin{frame}[label=credit-1a]{The credit goes to the collaborators }
@@ -234,41 +223,41 @@ Thank you for your attention!
 \end{multicols}
 \end{frame}
 %
-\begin{frame}[label=credit-2]
-\begin{card}[Israeli Institute for Biological Research]
-Eyal Fattal, Yardena Raviv, Valery Babin, Mordechai Hotoveli, David Perry
-\end{card}
-\begin{card}[TAU]
-Ron Shnapp, Meny Kon, Grigori Gulitski, Sabrina Shlain
-\end{card}
-\begin{card}[Funding]
-Israel Science Foundation, PAZY Grant, Metro 450 grant
-\end{card}
-\end{frame}
+% \begin{frame}[label=credit-2]{Israel Institute for Biological Research}
+% \begin{card}[Israeli Institute for Biological Research]
+% Eyal Fattal, Yardena Raviv, Valery Babin, Mordechai Hotoveli, David Perry
+% \end{card}
+% \begin{card}[TAU]
+% Ron Shnapp, Meny Kon, Grigori Gulitski, Sabrina Shlain
+% \end{card}
+% \begin{card}[Funding]
+% Israel Science Foundation, PAZY Grant, Metro 450 grant
+% \end{card}
+% \end{frame}
 %
 
-\subsection{Credits}
+% \subsection{Credits}
 
-\begin{frame}[label=credit-1]{The credit goes to the collaborators }
-\begin{multicols}{2}
-\centering
-\cardImg{group_photo.jpg}{.49\textwidth} \cardImg{calibration_team.jpg}{0.49\textwidth}
-\cardImg{sabrina_caliper.jpg}{.49\textwidth}\cardImg{meny_sabrina.jpg}{0.49\textwidth}
-\end{multicols}
-\end{frame}
-%
-\begin{frame}[label=credit-2]
-\begin{card}[Israeli Institute for Biological Research]
-Eyal Fattal, Yardena Raviv, Valery Babin, Mordechai Hotoveli, David Perry
-\end{card}
-\begin{card}[TAU]
-Ron Shnapp, Meny Kon, Grigori Gulitski, Sabrina Shlain
-\end{card}
-\begin{card}[Funding]
-Israel Science Foundation, PAZY Grant, Metro 450 grant
-\end{card}
-\end{frame}
-%
+% \begin{frame}[label=credit-1]{The credit goes to the collaborators }
+% \begin{multicols}{2}
+% \centering
+% \cardImg{group_photo.jpg}{.49\textwidth} \cardImg{calibration_team.jpg}{0.49\textwidth}
+% \cardImg{sabrina_caliper.jpg}{.49\textwidth}\cardImg{meny_sabrina.jpg}{0.49\textwidth}
+% \end{multicols}
+% \end{frame}
+% %
+% \begin{frame}[label=credit-2]
+% \begin{card}[Israeli Institute for Biological Research]
+% Eyal Fattal, Yardena Raviv, Valery Babin, Mordechai Hotoveli, David Perry
+% \end{card}
+% \begin{card}[TAU]
+% Ron Shnapp, Meny Kon, Grigori Gulitski, Sabrina Shlain
+% \end{card}
+% \begin{card}[Funding]
+% Israel Science Foundation, PAZY Grant, Metro 450 grant
+% \end{card}
+% \end{frame}
+% %
 
 % \begin{frame}[label=ron]
 % \frametitle{We start with a happy end story}
@@ -277,42 +266,6 @@ Israel Science Foundation, PAZY Grant, Metro 450 grant
 % Ron Shnapp is a faculty at the Ben Gurion University, but it could turn out differently. 
 % \end{cardTiny}
 % \end{frame}
-
-\begin{frame}{Take-home message}
-\begin{itemize}
-\item Customized real-time image analysis on FPGA can be implemented for long-recording, high-speed 3D-PTV
-\item New developments change a paradigm about 3D-PTV: from the laboratory, table-top experiments to wind tunnels and field experiments
-\item Instead of dense field representation (TomoPIV, Shake the box),  you can obtain an unprecedented data set of of Lagrangian trajectories, along with Lagrangian velocity and material derivative. 
-\end{itemize}
-
-\begin{cardTiny}\href{https://www.nature.com/articles/s41598-019-43555-2}{Details are in ``Extended 3D-PTV ...'' by Shnapp et al. Sci. Rep.}
-\end{cardTiny}
-
-\end{frame}
-%
-
-%
-%%\begin{frame}{Lagrangian to Eulerian post-processing}
-%%\centering\cardImg{voxel1}{.6\textwidth}
-%%\end{frame}
-%
-
-	 
-%\subsection{Post Processing}
-
-
-
-\begin{frame}{Take-home message}
-\begin{itemize}
-\item Customized real-time image analysis on FPGA can be implemented for long-recording, high-speed 3D-PTV
-\item New developments change a paradigm about 3D-PTV: from the laboratory, table-top experiments to wind tunnels and field experiments
-\item Instead of dense field representation (TomoPIV, Shake the box),  you can obtain an unprecedented data set of of Lagrangian trajectories, along with Lagrangian velocity and material derivative. 
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Thanks for your attention \href{https://www.dropbox.com/s/resn98zu5l7vtty/real_time_3dptv.mp4?raw=1}{clip}}
-\embedvideo{\includegraphics[width=\textwidth]{fig/real_time_3dptv_snapshot.jpg}}{video/real_time_3dptv.mp4}    
-\end{frame}
 
 
 \end{document}
