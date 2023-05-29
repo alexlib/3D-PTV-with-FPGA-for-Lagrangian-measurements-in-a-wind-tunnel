@@ -54,10 +54,9 @@
 \end{columns}
 \end{frame}
 
-    
-\begin{frame}[label=app-19]{Flow inside the canopy}
+\begin{frame}[label=app-19]{Flow inside the canopy \href{https://www.dropbox.com/s/9x43i2uk9q38fho/flow_inside_laser.mp4?raw=1}{video}}
     \centering
-    \cardImg{flow_snapshot_inside.jpg}{.9\textwidth}
+    \embedvideo{\cardImg{flow_snapshot_inside.jpg}{.9\textwidth}}{video/flow_inside_laser.mp4}
 \end{frame}
     
 
@@ -69,38 +68,51 @@
 \end{frame}
     
 
-\begin{frame}[label=app-6]{Rotation table experiments}
+\begin{frame}[label=app-6]{Rotation table experiments, \href{https://www.dropbox.com/s/933wsb9xdahbyi9/rotation.mp4?raw=1}{ETH Zurich}}
     \embedvideo{\includegraphics[width=0.8\textwidth]{fig/rotation.jpg}}{video/rotation.mp4}
 \end{frame}
     
   
-\begin{frame}[label=app-7]{Microgravity applications: remote and not easily controlable}   
-    \begin{columns}
-    \column{.4\textwidth}
-        \cardImg{microgravity}{\linewidth}
-    \column{.7\textwidth}
-        \cardImg{space_3d_ptv}{\linewidth}
-    \end{columns}
+\begin{frame}[label=app-7]{Microgravity applications: remote and \href{https://www.dropbox.com/s/59ophf177gcfjzq/boiling_microgravity.mp4?raw=1}{difficult to control}}   
+    % \begin{columns}
+    % \column{.4\textwidth}
+    %     \cardImg{microgravity}{\linewidth}
+    % \column{.7\textwidth}
+    \centering
+    \embedvideo{\cardImg{space_3d_ptv}{.8\textwidth}}{video/boiling_microgravity.mp4}    
+        
+%    \end{columns}
 \end{frame}
 
 
-\begin{frame}[label=app-11]{Real-time is easier with a single camera with a four-view splitter}
-    \centering\cardImg{ldc_splitter}{0.8\textwidth}
-    \embedvideo{\includegraphics[width=\textwidth]{ldc_splitter}}{video/splitter_short.mp4}
-    % \begin{cardTiny} A high speed camera with a four-view optical system \end{cardTiny}
-\end{frame}
+% \begin{frame}[label=app-11]{Real-time is easier with a single camera with a four-view splitter}
+%     \centering\cardImg{ldc_splitter}{0.8\textwidth}
+%     \embedvideo{\includegraphics[width=\textwidth]{ldc_splitter}}{video/splitter_short.mp4}
+%     % \begin{cardTiny} A high speed camera with a four-view optical system \end{cardTiny}
+% \end{frame}
 
     
 \begin{frame}[label=app-8]{An example from Chamorro's group}
     \centering\cardImg{kim/setup.png}{.9\textwidth}
 \end{frame}
     
-\begin{frame}[label=app-9]{Four view splitter video}
-    \embedvideo{\includegraphics[width=\textwidth]{fig/kim/4views.png}}{fig/kim/Video1a.mp4}
+\begin{frame}[label=app-9]{Four view splitter \href{https://www.dropbox.com/s/h6g8d373lxgkqv8/Video1a.mp4?raw=1}{video}}
+    \embedvideo{\includegraphics[width=.8\textwidth]{fig/kim/4views.png}}{fig/kim/Video1a.mp4}
 \end{frame}
     
-\begin{frame}[label=app-10]{You can get very dense result: turbulent jet}
-        \centering\cardImg{kim/jet.png}{\textwidth}
+% \begin{frame}[label=app-10]{You can get very dense result: turbulent jet}
+%     \centering\cardImg{kim/jet.png}{\textwidth}
+% \end{frame}
+
+\begin{frame}[label=app-10b]{You can adjust 3D-PTV to microflows, using defocusing, scanning, photogrammetry}
+\begin{center}
+\begin{columns}
+\column{.7\textwidth}
+	\cardImg{kim/micro_3dptv.png}{\textwidth}
+\column{.3\textwidth}
+	\cardImg{kim/micro_3dptv_result.png}{\textwidth}
+\end{columns}
+\end{center}
 \end{frame}
 
 
@@ -197,27 +209,30 @@
     %https://www.youtube.com/watch?v=umTqQSzKRmA    
 \end{frame}
     
-    \begin{frame}[label=app-23]
+\begin{frame}[label=app-23]
     \frametitle{Flamingo underwater feeding -- \href{https://www.dropbox.com/s/ic0l5npzon834l9/flamingo.mp4?raw=1}{San Diego Zoo}}
     % https://www.youtube.com/watch?v=-1BF2XqboOo
     \begin{center}
     \embedvideo{\includegraphics[width=\textwidth]{fig/flamingo.png}}{video/flamingo.mp4}
     \end{center}
-    \end{frame}
-    
-    %
-    
-\begin{frame}[label=app-24]
-    \frametitle{Colloids breakage events in turbulent flow, \href{https://www.dropbox.com/s/aufwfraotj5rll7/colloids1.mp4?raw=1}{ETH Zurich}}
-    %https://pubs.acs.org/doi/10.1021/acs.langmuir.5b03804
-    \embedvideo{\includegraphics[width=\textwidth]{fig/colloids1.png}}{video/colloids1.mp4}
 \end{frame}
     
     %
     
-\begin{frame}[label=app-25]{Colloids breakage events in turbulent flow, \href{https://www.dropbox.com/s/8cimpwfsukf11u2/colloids2.mp4?raw=1}{ETH Zurich}}
+\begin{frame}[label=app-24]
+    \frametitle{Colloid aggregates breakage in extensional 3D flow, \href{https://www.dropbox.com/s/aufwfraotj5rll7/colloids1.mp4?raw=1}{ETH Zurich}}
     %https://pubs.acs.org/doi/10.1021/acs.langmuir.5b03804
-    \embedvideo{\includegraphics[width=\textwidth]{colloid_sequence.jpg}}{video/colloids2.mp4}\end{frame}
+\begin{center}
+    \embedvideo{\includegraphics[width=\textwidth]{fig/colloids1.png}}{video/colloids1.mp4}
+\end{center}    
+\end{frame}
+    
+\begin{frame}[label=app-25]{Quantify colloid aggregates breakage in turbulence \href{https://www.dropbox.com/s/8cimpwfsukf11u2/colloids2.mp4?raw=1}{ETH Zurich}}
+    %https://pubs.acs.org/doi/10.1021/acs.langmuir.5b03804
+\begin{center}
+    \embedvideo{\includegraphics[width=\textwidth]{colloid_sequence.jpg}}{video/colloids2.mp4}
+\end{center}       
+\end{frame}
     
     
 \begin{frame}[label=app-26]{Real-time vortex identification for wind turbine blade pitch control -- Caroline Braud}
@@ -228,17 +243,19 @@
 \end{frame}
     
 \begin{frame}[label=app-27]{Real-time sizing with 3D tracking -- Rayne Ramirez, Uni. Oslo}
-    \begin{columns}
+  \begin{columns}
     \column{0.5\textwidth}
-        \cardImg{drop-example}{.49\textwidth}
+        \cardImg{drop-example}{\textwidth}
     \column{0.5\textwidth}
-        \cardImg{drops}{.49\textwidth}
-    \end{columns}
+        \cardImg{drops}{\textwidth}
+ \end{columns}
 \end{frame}
     
 \begin{frame}[label=app-28]{Fibers -- \href{https://www.dropbox.com/s/y5gf55qqeyq5ljr/fibers.mp4?raw=1}{Stefano Brizzolara, ETH Zurich}}
     % https://twitter.com/stebrizzo94/status/1525577322144976910?s=20
-    \embedvideo{\includegraphics[height=\textheight]{fibers.png}}{video/fibers.mp4}
+\begin{center}
+    \embedvideo{\includegraphics[height=0.8\textheight]{fibers.png}}{video/fibers.mp4}
+\end{center}    
 \end{frame}
 
 \begin{frame}[label=app-29]{Microplastics in a vortex - \href{https://www.dropbox.com/s/in5ewv968dy9j3q/microplastics.mp4?raw=1}{Turbulence Structure Laboratory}}
@@ -248,23 +265,32 @@
 \end{frame}
 
     
-\begin{frame}[label=app-18a]{Multiphase flows - track both particles and flow, e.g. study inertial clustering}
-\embedvideo{\cardImg[height=.8\textheight]{two_phase_3dptv}
+\begin{frame}[label=app-18a]{Multiphase flows - track both particles and flow, \href{}{inertial clustering}}
+\begin{center}
+    \embedvideo{\cardImg[height=.8\textheight]{two_phase_3dptv}
     {0.8\textwidth}}{video/twophase.mp4}
+\end{center}
 \end{frame}
     
     
 \begin{frame}[label=app-30]{Drone vs turbulence - \href{https://www.dropbox.com/s/3lav5rf6s8su6f5/drone.mp4?raw=1}{University of Minnesota}}
     % Imaging‑based 3D particle tracking system forfield characterization ofparticle dynamics inatmospheric flows
-    \embedvideo{\includegraphics[height=\textheight]{drone.png}}{video/drone.mp4}\\
+    \begin{center}
+    \embedvideo{\includegraphics[height=0.8\textheight]{drone.png}}{video/drone.mp4}\\
     Bristow et al. Exp. Fluids, 2023
+    \end{center}
 \end{frame}
     
-\begin{frame}[label=app-31]{Soon we could do it using AR/VR}
-    \cardImg{mr_ptv_photo}{0.8\textwidth}
-    Chivers, T. Uni. Vermont, MSc Thesis, 2023
+\begin{frame}[label=app-31a]{Soon we could do it using \href{https://www.dropbox.com/s/ckis9r6omd5y4fq/vuforia.mp4?raw=1}{AR/VR}}
+    \centering 
+    \embedvideo{\cardImg{mr_ptv_photo}{0.8\textwidth}}{video/vuforia.mp4}
+    Chivers, T. Uni. Vermont, MSc Thesis, 2023 and Vuforia promotional video
 \end{frame}
-    
+
+\begin{frame}[label=app-31b]{Real-time 3D-PTV is enabling technology for autonomous lab: \href{https://self-driving-lab-demo.readthedocs.io/en/latest/index.html}{self-driving-lab-demo.readthedocs.io}}
+    \centering \cardImg[height=.75\textheight]{automatic_lab_concept}{\textwidth}
+\end{frame}
+        
     
 % \begin{frame}[label=app-32]{Turbulent flow inside an urban canopy model at \href{https://www.dropbox.com/s/9x43i2uk9q38fho/flow_inside_laser.mp4?raw=1}{IIBR wind tunnel}}
 %     \embedvideo{\includegraphics[width=\textwidth]{flow_snapshot_inside.jpg}}{video/flow_inside_laser.mp4}
@@ -274,14 +300,14 @@
 %\end{document}
 
 \begin{frame}[label=app-20]{You could also do PIV on FPGA}
-    \cardImg{real_time_piv_fpga.png}{\textwidth}
+    \centering \cardImg[height=.75\textheight]{real_time_piv_fpga.png}{\textwidth}
     \begin{cardTiny}
     Real-time particle image velocimetry based on FPGA technology, Munoz et al. IEEE (2009)
     \end{cardTiny}
 \end{frame}
 
     
-\begin{frame}[label=app-17a]{But 3D-PTV can you more insight in terms of turbulence}
+\begin{frame}[label=app-17a]{But 3D-PTV can you give more insight in terms of 3D structure and turbulence}
     \begin{cardTiny} 
     This means we need  the \alert{full gradient tensor} along the particle trajectories:
     $\partial u_{i}/\partial x_{j}$ in space and time

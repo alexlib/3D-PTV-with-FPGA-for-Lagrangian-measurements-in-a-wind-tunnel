@@ -1,5 +1,6 @@
 %\documentclass[aspectratio=169]{beamer}
-\documentclass[preprint, aspectratio=43]{beamer}
+% \documentclass[preprint, aspectratio=43]{beamer}
+\documentclass[aspectratio=169]{beamer}
 % \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage[bigfiles]{pdfbase}
@@ -43,9 +44,10 @@
 %\usePrimaryRed
 \usePrimaryPink
 %\usePrimaryBlueGrey
-%\useAccentGreen
-\useAccentPurple
-%\useAccentWhite
+\useAccentGreen
+%\useAccentPurple
+%\useAccentYellow
+%\useAccentRed
 %\useAccentIndigo
 
 \usepackage[sfdefault]{roboto}
@@ -53,7 +55,7 @@
 \input{embed_video.tex}
 
 % \includeonlyframes{intro-*}
-%\includeonlyframes{why-*}
+% \includeonlyframes{why-*}
 % \includeonlyframes{ptv-*}
 % \includeonlyframes{real-*}
 % \includeonlyframes{why-*}
@@ -143,8 +145,8 @@
 
 \begin{frame}[label=opensource-1]{Use sustainable software: Python, NumPy, PyData, Github}
 \begin{itemize}
-\item \includegraphics[width=0.3\textwidth]{openptv} \hspace{1em} library, `liboptv`, ANSI C
-\item PyPTV GUI for {\em liboptv} in Python \includegraphics[width=.3\textwidth]{pyptv}
+\item \includegraphics[width=0.3\textwidth]{openptv}
+ \includegraphics[width=.3\textwidth]{pyptv} \includegraphics[width=.3\textwidth]{fig/myptv_logo.png}
 \item FlowTracks - trajectories database management (see Meller and Liberzon 2016)
 \item BlobRecorder - proprietary hardware/customized software (see Shnapp et al. arxiv)
 \end{itemize}
@@ -195,9 +197,9 @@ Real-time 3D-PTV is an invaluable tool for a wide range of applications, from fu
 
 \begin{frame}{Take-home message}
   \begin{itemize}
-  \item Customized real-time image analysis on FPGA can be implemented for long-recording, high-speed 3D-PTV
-  \item New developments change a paradigm about 3D-PTV: from the laboratory, table-top experiments to wind tunnels and field experiments
-  \item Instead of dense field representation (TomoPIV, Shake the box),  you can obtain an unprecedented data set of of Lagrangian trajectories, along with Lagrangian velocity and material derivative. 
+  \item Real-time image analysis on FPGA is feasible for long-recording, high-speed 3D-PTV
+  \item Real-time feature changes a paradigm about 3D-PTV: from the laboratory, table-top experiments to wind tunnel, field experiments, and new applications (e.g. control)
+  \item Instead of dense field representation (TomoPIV, Shake the box),  you can obtain an unprecedented data set of of Lagrangian trajectories, reducing particle density and gaining new features like infinitely long time recording, along with Lagrangian velocity fields and material derivatives. 
   \end{itemize}
   
   \begin{cardTiny}\href{https://www.nature.com/articles/s41598-019-43555-2}{Details are in ``Extended 3D-PTV ...'' by Shnapp et al. Sci. Rep.}
@@ -205,17 +207,23 @@ Real-time 3D-PTV is an invaluable tool for a wide range of applications, from fu
   
   \end{frame}
   
-  
-  \begin{frame}{Thanks for your attention \href{https://www.dropbox.com/s/resn98zu5l7vtty/real_time_3dptv.mp4?raw=1}{clip}}
-  \embedvideo{\includegraphics[width=\textwidth]{fig/real_time_3dptv_snapshot.jpg}}{video/real_time_3dptv.mp4}    
+  \begin{frame}{Towards a real real-time 3D-PTV :) \href{https://www.dropbox.com/s/os4tz91gq0ginp8/real_time_3dptv_calibration.mp4?raw=1}{\ldots}}
+  \embedvideo{\includegraphics[width=0.9\textwidth]{fig/real_time_3dptv_calibration.png}}{video/real_time_3dptv_calibration.mp4}    
   \end{frame}
+
+  
+  \begin{frame}{Thanks for your attention) \href{https://www.dropbox.com/s/resn98zu5l7vtty/real_time_3dptv.mp4?raw=1}{\ldots}}
+  \embedvideo{\includegraphics[width=0.9\textwidth]{fig/real_time_3dptv_snapshot.jpg}}{video/real_time_3dptv.mp4}    
+  \end{frame}
+
+
 
   
 
 % \subsection{Credits}
 \topicFramePrimary{Credits}
 
-\begin{frame}[label=credit-1a]{The credit goes to the collaborators }
+\begin{frame}[label=credit-1a]{The credit goes to the collaborators and funding agencies}
 \begin{multicols}{2}
 \centering
 \cardImg{group_photo.jpg}{.49\textwidth} \cardImg{calibration_team.jpg}{0.49\textwidth}

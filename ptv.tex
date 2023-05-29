@@ -18,7 +18,7 @@
     3D-PTV is a technique that allows tracking of particles in three-dimensional space for improved fluid dynamics understanding, using the Lagrangian framework
     \end{card}
     \begin{card}[TL;DR]
-    Multiple 2D projections of the particles are obtained and overlapped to create 3D reconstruction. Software than tracks the particles' positions through sequential images over time. 
+    Multiple 2D projections of the particles are obtained and overlapped to create 3D reconstruction, than the particles' positions through sequential 3D clouds are linked in space. 
     \end{card}
     \end{multicols}
 \end{frame}
@@ -77,24 +77,24 @@
     \centering\cardImg{epipolar}{\textwidth}
 \end{frame}
 
-\begin{frame}[label=ptv-8]{That's how it looks in software}
-    \centering\cardImg{stereo_matching}{\textwidth}
+\begin{frame}[label=ptv-8]{That's how it looks in the OpenPTV}
+    \centering\cardImg[height=.8\textheight]{stereo_matching}{\textwidth}
 \end{frame}
 
-\begin{frame}[label=ptv-9]{It strongly depends on 3D calibration}
+\begin{frame}[label=ptv-9a]{It strongly depends on 3D calibration}
     \centering\cardImg{calibration1}{\textwidth}
 \end{frame}
 
 
-\begin{frame}[label=ptv-9]{We prefer multi-media non-linear calibration}
+\begin{frame}[label=ptv-9b]{We prefer multi-media non-linear calibration}
     \centering\cardImg[height=.8\textheight]{multimedia}{\textwidth}
 \end{frame}
 
-\begin{frame}[label=ptv-10]{Four frames sliding tracking}
+\begin{frame}[label=ptv-10]{Four frames sliding tracking (robust and fast)}
     \centering\cardImg{tracking}{1\textwidth}
 \end{frame}
 
-\begin{frame}[label=ptv-11]{Tracking in 2D space}
+\begin{frame}[label=ptv-11]{Tracking in 2D space vs 3D space}
     \centering\cardImg[height=.8\textheight]{tracking_in_image_space_projection}{1\textwidth}
 \end{frame}
 
