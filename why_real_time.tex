@@ -25,92 +25,75 @@
 \begin{frame}[label=why-3a]{How many times we have experienced \ldots }
 \begin{columns}
 
-\column{.55\textwidth}
+\column{.65\textwidth}
+\begin{cardTiny}
 \begin{itemize}
 \item Overlooked data due to calibration, camera, or trigger issues after weeks of preparation.
-\item Deviations in measured flow from the planned conditions due to complex factors like boundary conditions and fluid properties.
-\item Missed significant flow events, such as prey-predator interactions, surrounding recording time.
-\item Struggling to capture both short and long time scales with high temporal resolution and extended recording time.
+\item Deviations from the planned conditions due to complex factors like boundary conditions and fluid properties.
+\item Missed significant flow events, such as prey-predator interactions, before/after recording time.
+\item Struggled to capture both short and long time scales with high temporal resolution and extended recording time.
 \end{itemize}
-\column{.45\textwidth}
+\end{cardTiny}
+\column{.4\textwidth}
 \includegraphics[width=\textwidth]{fig/me-showing.jpg}
 \end{columns}
 \end{frame}
 
+\subsection{Real-time 3D-PTV: Unleashing the Power of Real-Time Information}
 
-% \begin{frame}{The Conceptual Advantage of Real-Time Information for Measurement Systems}
+\begin{frame}[label=why-4a]{Harnessing real-time 3D-PTV revolutionizes fluid flow measurements 1/2}
 
-% \begin{itemize}
-% \item Real-time information gives users a better understanding of the measurement process and enables them to make more informed decisions based on the data.
-% \item Real-time information allows users to monitor the measurement process in real-time and detect any anomalies or issues as they occur: calibration/malfunction/out-of-sync
-% \item Real-time information about uncertainties allows users better to understand the reliability and accuracy of the measured data.
-% \item Real-time information about uncertainties can help users optimize the measurement process itself.
-% \end{itemize}
+% \textbf{Pros:}
+\begin{card}[Pros: ]
+\begin{enumerate}
+\item  \textbf{Effective Troubleshooting and Maintenance:}
 
-% \end{frame}
+    Real-time information enables swift troubleshooting and maintenance, minimizing errors and inaccuracies.
+    Early detection of issues prevents critical consequences, especially in safety-critical systems.
 
-\topicFramePrimary{What are the most prominent advantages of real-time 3D-PTV?}
+\item    \textbf{Improved Accuracy and Precision:}
 
-
-
-\begin{frame}[label=why-6]{Real-Time Information Enables Effective Troubleshooting and Maintenance}
-
-\begin{itemize}
-\item Real-time information allows for quick and effective troubleshooting and maintenance, which can help prevent further errors or inaccuracies (e.g. 3D calibration)
-\item Early detection of issues is critical in safety-critical systems where even a small delay in detecting a problem can have serious consequences (e.g. reverse flow before critical heat flux)
-\end{itemize}
-
+    Real-time information allows for on-the-fly adjustments, enhancing measurement accuracy and precision.
+    Informed decisions can be made by considering real-time uncertainties, and optimizing data usage.
+\end{enumerate}
+\end{card}
 \end{frame}
 
-\begin{frame}[label=why-7]{Real-Time Information Improves Accuracy and Precision}
+\begin{frame}[label=why-4b]{Harnessing real-time 3D-PTV revolutionizes fluid flow measurements 2/2}
+
+\begin{cardTiny}
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item \textbf{Process Control:}
+
+    Real-time output facilitates real-time monitoring and control of processes, optimizing performance.
+    Crucial for manufacturing and industrial applications, impacting quality, safety, and efficiency.
+
+\item   \textbf{Remote Monitoring:}
+
+    The real-time output enables remote monitoring, allowing for distance control of measurement systems.
+    Particularly valuable in challenging environments or inaccessible areas.
+\end{enumerate}
+
+\textbf{Cons:}
 
 \begin{itemize}
-\item Real-time information allows users to adjust the measurement process in real-time to improve accuracy and precision. (e.g. camera small shift)
-\item Real-time information about uncertainties allows users to make more informed decisions about how to use the data and what level of confidence they can have in the results (e.g. agile: release fast, fail fast) 
-\item Real-time monitoring of uncertainties can help users optimize the measurement process and reduce uncertainties to improve overall accuracy and precision.(e.g. improve focus, angle, aperture)
+   \item Dependency on real-time capabilities and data availability.
+   \item Possibly lower particle density depending on hardware capabilities
+   % \item Initial setup and calibration may require additional effort.
 \end{itemize}
+\end{cardTiny}
 \end{frame}
 
-
-\begin{frame}[label=why-9]{Real-Time Information Enables Process Control}
-
-\begin{itemize}
-\item Real-time output can be used to monitor and control processes in real time, allowing for adjustments to be made as needed to ensure optimal performance (future ideas, hopefully soon in chemical and bioreactors)
-\item Real-time information is especially important in manufacturing and industrial applications where process control can impact quality, safety, and efficiency (e.g. painting, filtering, flotation, etc.)
-\end{itemize}
-\end{frame}
-
-\begin{frame}[label=why-10]{Real-Time Information Enables Remote Monitoring}
-
-\begin{itemize}
-\item Real-time output can enable remote monitoring of measurement systems, allowing users to monitor and control systems from a distance (e.g. microgravity experiment in space)
-\item Real-time information is especially important in applications where access to the measurement system may be limited or difficult (e.g. ocean floor, UAV, AUV)
-\end{itemize}
-
-\end{frame}
-
-% \subsection{Why real-time 3D-PTV}
-
-% \begin{frame}[label=why-11]{Key Advantages of Real-Time 3D-PTV}
-
-% \begin{itemize}
-% \item Immediate feedback on the velocity field - enables process control and optimization of parameters and setup.
-% \item Enables faster decision-making and quick adjustments to be made as needed.
-% \item Detailed enough insight into the fluid flow behavior for understanding the dynamics.
-% \item Improve the accuracy and precision of the measured data by allowing for adjustments to be made in real-time to reduce uncertainties.
-% \item Detect anomalies or issues as they occur, allowing for quick and effective troubleshooting and maintenance.
-% \item To remotely monitor fluid flow behavior, especially important in applications where access to the measurement system may be limited or difficult (underwater, in-engine, in-flight).
-% \end{itemize}
-% \end{frame}
 
 \begin{frame}[label=why-12]{We were lucky to capitalize on these benefits in the wind tunnel experiment}
 \begin{center}
 \begin{columns}
-\column{.4\textwidth}
+\column{.35\textwidth}
     \cardImg{calibration_in_laser}{\textwidth}
     \cardImg{ptv_wind_tunnel_photo_3}{\textwidth}%
 \hfill
-\column{.4\textwidth}
+\column{.35\textwidth}
     \cardImg{traj_snapshot3}{\textwidth}%
     \cardImg{ptv_wind_tunnel_photo_4.png}{\textwidth}
 \end{columns}
@@ -121,10 +104,12 @@
 \begin{frame}[label=why-5]
 \frametitle{This is our happy end story \ldots }
 \begin{columns}
-   \column{.6\textwidth}
+   \column{.7\textwidth}
     \centering \cardImg{Ron.jpg}{\textwidth}
-    \column{.4\textwidth}
-    Thanks to this breakthrough, Dr. Ron Shnapp is a fresh tenure-track faculty at Ben Gurion University
+    \column{.3\textwidth}
+    \begin{cardTiny}
+        Thanks to this breakthrough, Dr. Ron Shnapp successfully completed his Ph.D. and postdoc, and he is a tenure-track faculty at Ben Gurion University
+    \end{cardTiny}
 \end{columns}
 \end{frame}
 
