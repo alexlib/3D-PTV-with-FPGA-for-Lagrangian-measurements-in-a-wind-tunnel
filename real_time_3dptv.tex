@@ -53,17 +53,17 @@
 \end{frame}
 
 
-\begin{frame}[label=real-6]{We took a step forward: real time detection, $x^{(i)},y^{(i)}$ only}
-    \centering\cardImg{sobel_1}{.8\textwidth}
-\end{frame}
-
-
 \begin{frame}[label=real-5b]{We could utilize the special hardware from Mikrotron }
     \begin{multicols*}{2}
     \cardImg{mikrotron_sobel}{.45\textwidth}
     \cardImg{mikrotron_inside}{.45\textwidth}
     \end{multicols*}
     \centering \cardImg{realtime1}{.8\textwidth}
+\end{frame}
+
+
+\begin{frame}[label=real-6]{It was a significant step forward: real time detection, $x^{(i)},y^{(i)}$ only}
+    \centering\cardImg{sobel_1}{.8\textwidth}
 \end{frame}
 
 
@@ -80,7 +80,16 @@
     \end{cardTiny}
 \end{frame}
 
-\begin{frame}[label=real-8]{However, real experiments are more complicated}
+
+\begin{frame}[label=real-7c]{Standard FPGA cameras from Zhao et al. at UIUC}
+    \begin{card}[With simple background and large particles it is even simpler]
+    \centering
+    \includegraphics[height=.8\textheight, width=\textwidth, keepaspectratio]{3d_vptv_experiment}
+    \end{card}
+\end{frame}
+
+
+\begin{frame}[label=real-8]{Real experiments are more complicated than just a bright dots on a black uniform gradient}
     \begin{multicols}{2}
     \includegraphics[width=.49\textwidth]{background.png}
     \includegraphics[width=.49\textwidth]{detection.png}
@@ -88,10 +97,6 @@
     \begin{cardTiny}
     Raw 3D-PTV image of the wind tunnel experiments: Background ->  binary image after background subtraction, and detection using a locally adaptive filter
     \end{cardTiny}
-\end{frame}
-
-\begin{frame}[label=real-9]{We partnered with 1Vision LTD to develop a dedicated hardware}
-    \centering\cardImg{1vision}{1\textwidth}
 \end{frame}
 
 
@@ -106,22 +111,19 @@
 \end{frame}
 
 \begin{frame}[label=real-12]{The main concept}
-    \centering\cardImg[height=.8\textheight]{fig1.png}{\textwidth}
+    \centering\cardImg[height]{fig1.png}{.7\textwidth}
 \end{frame}
 
 
-\begin{frame}[label=real-7c]{Standard FPGA cameras from Zhao et al. at UIUC}
-    \begin{card}[With simple background and large particles it is even simpler]
-    \centering
-    \includegraphics[height=.8\textheight, width=\textwidth, keepaspectratio]{3d_vptv_experiment}
-    \end{card}
+\begin{frame}[label=real-9]{Together with 1Vision LTD we developed a breakthrough solution on FPGA framegrabbers from Silicon Software GmbH}
+    \centering\cardImg{1vision}{1\textwidth}
 \end{frame}
 
 
-\begin{frame}[label=real-7d]{Future FPGA could include a neural network, Gim et al. at SKKU/KAIST}
-    %\begin{card}{Convolutional neural network}
-    \centering \cardImg[height=.8\textheight]{3d_detection_cnn}{\textwidth}
-\end{frame}
+% \begin{frame}[label=real-7d]{Future FPGA could include a neural network, Gim et al. at SKKU/KAIST}
+%     %\begin{card}{Convolutional neural network}
+%     \centering \cardImg[height=.8\textheight]{3d_detection_cnn}{\textwidth}
+% \end{frame}
 
 
 
